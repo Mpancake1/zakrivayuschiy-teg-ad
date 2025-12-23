@@ -1,1 +1,58 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+:root {
+  /* Шрифты и базовые размеры */
+  --main-font-family: "Inter-Variable", sans-serif;
+  --accent-font-family: "PressStart2P-Regular", sans-serif;
+  --main-font-size: 14px;
+  --card__font-size: 18px;
+
+  /* Цветовая палитра и акценты */
+  --accent-color: #000000;
+  --contour-color: var(--accent-color);
+  --animation-fill-color: #ff0000;
+  --watermark-stroke-color: #ffffff;
+  --accent-border: 2px solid var(--accent-color);
+
+  /* Фоновое оформление страницы */
+  --page-bg: 
+    repeating-linear-gradient(
+      90deg, 
+      #d3d3d3 0 2px, 
+      transparent 2px 4px
+    ),
+    repeating-linear-gradient(
+      180deg, 
+      #d3d3d3 0 2px, 
+      transparent 2px 4px
+    ),
+    linear-gradient(180deg, #e7e7e7, #1a1a1a);
+
+  /* Типографика и водяные знаки */
+  --watermark-font-size: 14px;
+  --watermark-stroke-width: 1px;
+  --header__tag-font-size: clamp(3.06rem, 1.9rem + 4.9cqi, 4.06rem); /* Перевел в rem для уникальности */
+  --header__caption-font-size: clamp(14px, 3.6px + 2.8cqi, 23px);
+
+  /* Геометрия шапки и карточек */
+  --header__inline-size: clamp(375px, 100%, 700px);
+  --header__block-size: clamp(327px, 279.7px + 12.6cqi, 368px);
+  --main__card__inline-size: clamp(375px, 100%, 700px);
+
+  /* Интерактивные элементы (Кнопки) */
+  --save-button__width: clamp(310px, 276.5px + 8.9vw, 339px);
+  --save-button_size: 28px;
+
+  /* Параметры диалоговых окон */
+  --dialog-height: 192px;
+  --dialog-min-width: 341px;
+  --dialog-max-width: 353px;
+  --dialog-padding: 30px 40px;
+}
+
+/* Адаптивные исключения */
+@media (min-width: 700px) {
+  :root {
+    --dialog-padding: 30px;
+    --save-button_size: 21px;
+  }
+}
